@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import TodoItem from "./TodoItem"
+import "./TodoList.css"
 
 const TodoList = () => {
 	const [todos, setTodos] = useState([])
@@ -62,7 +63,7 @@ const TodoList = () => {
 
 			<button onClick={handleAddTodo}>Agregar</button>
 
-			<ul>
+			<ul className="todo-list">
 				{todos.map((todo, index) => (
 					<TodoItem key={index} todo={todo} />
 				))}
