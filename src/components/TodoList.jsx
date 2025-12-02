@@ -52,17 +52,23 @@ const TodoList = () => {
 	}
 
 	return (
-		<div>
+		<div className="flex flex-col container mx-auto max-w-md pt-19 text-white">
 			<input
 				type="text"
 				placeholder="Nueva tarea"
+				className="w-full p-2 rounded-md border border-gray-300"
 				value={newTodo}
 				onChange={handleInputChange}
 			/>
 
-			<button onClick={handleAddTodo}>Agregar</button>
+			<button
+				onClick={handleAddTodo}
+				className="w-full p-2 rounded-md border border-gray-300 mt-10"
+			>
+				Agregar
+			</button>
 
-			<ul>
+			<ul className="w-full p-2 mt-20 list-disc">
 				{todos.map((todo, index) => (
 					<TodoItem key={index} todo={todo} />
 				))}
