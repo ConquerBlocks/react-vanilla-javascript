@@ -54,16 +54,16 @@ const TodoList = () => {
 	return (
 		<div className="flex flex-col container mx-auto max-w-md pt-19 text-white">
 			<input
+				className="w-full p-2 rounded-md border border-gray-300"
 				type="text"
 				placeholder="Nueva tarea"
-				className="w-full p-2 rounded-md border border-gray-300"
 				value={newTodo}
 				onChange={handleInputChange}
 			/>
 
 			<button
 				onClick={handleAddTodo}
-				className="w-full p-2 rounded-md border border-gray-300 mt-10"
+				className="w-full p-2 rounded-md border border-gray-300"
 			>
 				Agregar
 			</button>
